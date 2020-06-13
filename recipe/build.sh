@@ -1,10 +1,11 @@
 #!/bin/bash
 
-set -ex
-
 export CXXFLAGS="$CXXFLAGS -std=c++11"
 
-cmake -G "Unix Makefiles" \
+mkdir build
+cd build
+
+cmake .. \
   -DCMAKE_INSTALL_PREFIX=$PREFIX \
   -DCMAKE_BUILD_TYPE=Release
 
